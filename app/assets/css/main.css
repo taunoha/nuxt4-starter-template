@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import "./base.css";
+@import "./transition.css";
+@import "./utilities.css";
+
+@theme {
+  /* Font */
+  --font-*: initial;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas",
+    "Liberation Mono", "Courier New", "monospace";
+
+  /* Base Colors */
+  --color-*: initial;
+  --color-white: #fff;
+
+  /* Gray Colors */
+  --color-gray-50: #f2f2f2;
+  --color-gray-100: #ededed;
+  --color-gray-200: #e0e0e0;
+  --color-gray-300: #d4d4d4;
+  --color-gray-400: #c4c4c4;
+  --color-gray-500: #b3b3b3;
+  --color-gray-600: #a1a1a1;
+  --color-gray-700: #8a8a8a;
+  --color-gray-800: #6b6b6b;
+  --color-gray-900: #404040;
+  --color-gray-950: #000;
+
+  /* Brand Colors */
+  --color-brand-50: oklch(94.42% 0.03 238.83deg);
+  --color-brand-100: oklch(88.11% 0.064 241.48deg);
+  --color-brand-200: oklch(77.72% 0.123 243.32deg);
+  --color-brand-300: oklch(68.28% 0.176 248.35deg);
+  --color-brand-400: oklch(57.13% 0.168 251.38deg);
+  --color-brand-500: oklch(41.73% 0.118 249.88deg);
+  --color-brand-600: oklch(36.42% 0.1 248.97deg);
+  --color-brand-700: oklch(29.46% 0.08 248.4deg);
+  --color-brand-800: oklch(23.54% 0.059 245.1deg);
+  --color-brand-900: oklch(15.54% 0.034 237.76deg);
+  --color-brand-950: oklch(13.04% 0.025 227.1deg);
+}

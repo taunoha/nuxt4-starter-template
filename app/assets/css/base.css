@@ -1,0 +1,9 @@
+@layer base {
+  :root {
+    font-size: clamp(14px, 2vw, 18px);
+  }
+
+  html {
+    @apply bg-gray-900 text-white antialiased;
+  }
+}

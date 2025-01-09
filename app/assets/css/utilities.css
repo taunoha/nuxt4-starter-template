@@ -1,0 +1,19 @@
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@utility scroll-touch {
+  -webkit-overflow-scrolling: "touch";
+}
+
+@utility container {
+  padding-inline: 2rem;
+  margin-inline: auto;
+}
