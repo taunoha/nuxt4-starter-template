@@ -19,6 +19,11 @@ export default defineNuxtConfig({
   vite: {
     plugins: [Tailwind()],
   },
+  fonts: {
+    experimental: {
+      processCSSVariables: true,
+    },
+  },
   postcss: {
     plugins: {
       cssnano: {
