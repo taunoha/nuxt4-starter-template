@@ -8,7 +8,8 @@ This template serves as a future-proof foundation for your projects, allowing yo
 - Follow best practices and modern development patterns
 - Start building with a comprehensive set of pre-configured tools
 
-> Note: This template is maintained to stay current with Nuxt 4's development progress.
+> [!NOTE]
+> This template is maintained to stay current with Nuxt 4's development progress.
 
 ## Features
 
