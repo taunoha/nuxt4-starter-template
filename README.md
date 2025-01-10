@@ -6,7 +6,7 @@ This template serves as a future-proof foundation for your projects, allowing yo
 - Leverage upcoming Nuxt 4 features
 - Use the latest Tailwind CSS v4 (beta) capabilities
 - Follow best practices and modern development patterns
-- Start building with a comprehensive set of pre-configured tools
+- Typescript enabled by default
 
 > [!NOTE]
 > This template is maintained to stay current with Nuxt 4's development progress.
