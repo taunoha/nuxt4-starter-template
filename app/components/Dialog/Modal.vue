@@ -37,7 +37,7 @@ const ui = computed(() =>
     </DialogTrigger>
     <DialogPortal>
       <Transition name="fade">
-        <DialogOverlay class="bg-brand-900/50 fixed inset-0 z-[1000]" />
+        <DialogOverlay class="bg-brand-800/70 fixed inset-0 z-[1000]" />
       </Transition>
       <Transition name="slide-in-out">
         <DialogContent
@@ -51,7 +51,7 @@ const ui = computed(() =>
               <slot />
             </DialogDescription>
             <DialogClose
-              class="hover:text-brand-500 absolute top-4 right-4 cursor-pointer appearance-none leading-none text-gray-900 transition-colors duration-150"
+              class="hover:text-brand-500 absolute top-4 right-4 appearance-none leading-none text-gray-900 transition-colors duration-150"
               aria-label="Close"
             >
               <Icon name="bi:x-circle" size="24" />

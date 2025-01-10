@@ -13,6 +13,7 @@
   /* Base Colors */
   --color-*: initial;
   --color-white: #fff;
+  --color-black: #000;
 
   /* Gray Colors */
   --color-gray-50: #f2f2f2;

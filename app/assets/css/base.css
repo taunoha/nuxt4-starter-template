@@ -6,4 +6,8 @@
   html {
     @apply bg-gray-900 text-white antialiased;
   }
+
+  button {
+    @apply cursor-pointer;
+  }
 }
