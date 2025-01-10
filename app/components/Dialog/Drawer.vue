@@ -52,11 +52,8 @@ const ui = computed(() =>
             <DialogDescription class="h-dvh overflow-y-auto px-8 py-16">
               <slot />
             </DialogDescription>
-            <DialogClose
-              class="hover:text-brand absolute top-4 right-4 appearance-none leading-none transition-colors duration-150"
-              aria-label="Close"
-            >
-              <Icon name="bi:x-circle" size="24" />
+            <DialogClose as-child>
+              <AppButtonClose />
             </DialogClose>
           </div>
         </DialogContent>
