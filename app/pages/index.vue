@@ -38,14 +38,14 @@ useHead({
         <div
           class="sticky -bottom-8 z-10 -mx-8 -mb-8 flex justify-end rounded-b-lg border-t border-gray-200 bg-white/50 px-8 pt-8 pb-8 backdrop-blur-sm"
         >
-          <DialogClose
-            class="border-brand-500 bg-brand-500 hover:bg-brand-100 hover:text-brand-500 cursor-pointer rounded-lg border-2 px-4 py-2 font-semibold text-white transition-colors duration-150"
-          >
-            Close
+          <DialogClose as-child>
+            <AppButton>Close</AppButton>
           </DialogClose>
         </div>
       </DialogModal>
-      <p class="mx-auto flex max-w-xl flex-wrap justify-center gap-2 text-sm">
+      <p
+        class="mx-auto flex max-w-xl flex-wrap justify-center gap-2 pt-8 text-sm"
+      >
         <span v-for="item in posts" :key="item.title">
           {{ item.title }}
         </span>

@@ -32,10 +32,8 @@ const ui = computed(() =>
 
 <template>
   <DialogRoot>
-    <DialogTrigger
-      class="border-brand-500 bg-brand-500 hover:bg-brand-100 hover:text-brand-500 mb-8 cursor-pointer rounded-lg border-2 px-4 py-2 font-semibold text-white transition-colors duration-150"
-    >
-      <slot name="trigger" />
+    <DialogTrigger as-child>
+      <AppButton><slot name="trigger" /></AppButton>
     </DialogTrigger>
     <DialogPortal>
       <Transition name="fade">
