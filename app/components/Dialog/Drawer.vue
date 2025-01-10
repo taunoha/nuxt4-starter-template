@@ -2,12 +2,12 @@
 import { tv, type VariantProps } from "tailwind-variants";
 
 const drawer = tv({
-  base: "shadow-brand-700/70 absolute z-[1002] bg-white text-black shadow-2xl",
+  base: "shadow-brand-700/70 absolute z-[1002] overflow-hidden bg-white text-black shadow-2xl",
   variants: {
     position: {
-      left: "top-0 bottom-0 left-0 h-dvh w-[320px] overflow-hidden",
-      right: "top-0 right-0 bottom-0 h-dvh w-[320px] overflow-hidden",
-      bottom: "right-0 bottom-0 left-0 max-h-[50vh] overflow-hidden",
+      left: "top-0 bottom-0 left-0 h-dvh w-[320px]",
+      right: "top-0 right-0 bottom-0 h-dvh w-[320px]",
+      bottom: "right-0 bottom-0 left-0 max-h-[50vh]",
     },
   },
 });
