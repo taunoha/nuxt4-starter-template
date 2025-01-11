@@ -54,7 +54,7 @@
   .slide-in-right-leave-active,
   .slide-in-bottom-leave-active,
   .slide-in-left-leave-active {
-    transition: transform 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+    transition: transform 1.5s cubic-bezier(0.32, 0.72, 0, 1);
   }
 
   .slide-in-right-enter-from {
