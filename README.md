@@ -1,3 +1,5 @@
+![nuxt4-starter-template-preview](https://taunohanni.ee/github-nuxt4-preview.jpg)
+
 # Nuxt 4 Starter Template
 
 A modern Nuxt starter template packed with essential features and best practices. While Nuxt 3 is currently stable, this template is forward-compatible with the upcoming Nuxt 4, incorporating its latest enhancements and development patterns.
