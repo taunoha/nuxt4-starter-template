@@ -4,18 +4,41 @@ import { tv, type VariantProps } from "tailwind-variants";
 const drawer = tv({
   base: "shadow-brand-700/70 absolute z-[1002] overflow-hidden bg-white text-black shadow-2xl",
   variants: {
+    size: {
+      default: "",
+      md: "",
+      lg: "",
+    },
     position: {
-      left: "top-0 bottom-0 left-0 h-dvh w-[320px]",
-      right: "top-0 right-0 bottom-0 h-dvh w-[320px]",
+      left: "top-0 bottom-0 left-0 h-dvh",
+      right: "top-0 right-0 bottom-0 h-dvh",
       bottom: "right-0 bottom-0 left-0 max-h-[50vh]",
     },
   },
+  compoundVariants: [
+    {
+      size: "default",
+      position: ["left", "right"],
+      class: "w-full max-w-80",
+    },
+    {
+      size: "md",
+      position: ["left", "right"],
+      class: "w-full max-w-md",
+    },
+    {
+      size: "lg",
+      position: ["left", "right"],
+      class: "w-full max-w-2xl",
+    },
+  ],
 });
 
 type DrawerVariants = VariantProps<typeof drawer>;
 
 interface Props {
   position?: DrawerVariants["position"];
+  size?: DrawerVariants["size"];
   title: string;
 }
 </script>
@@ -23,10 +46,12 @@ interface Props {
 <script setup lang="ts">
 const props = withDefaults(defineProps<Props>(), {
   position: "left",
+  size: "default",
 });
 const ui = computed(() =>
   drawer({
     position: props.position,
+    size: props.size,
   })
 );
 </script>
@@ -49,12 +74,9 @@ const ui = computed(() =>
                 {{ props.title }}
               </VisuallyHidden>
             </DialogTitle>
-            <DialogDescription
-              class="h-dvh overflow-y-auto px-8 py-16"
-              as="div"
-            >
+            <div class="h-dvh overflow-y-auto px-8 py-16">
               <slot />
-            </DialogDescription>
+            </div>
             <DialogClose as-child>
               <AppButtonClose />
             </DialogClose>

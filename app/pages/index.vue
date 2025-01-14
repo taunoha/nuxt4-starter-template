@@ -27,9 +27,8 @@ useHead({
       <h1 class="mb-6 text-center text-5xl font-bold">Hello, World!</h1>
       <p class="text-brand-50 mb-12">Can you see me?</p>
       <div class="flex flex-wrap justify-center gap-4">
-        <DialogModal size="xl">
+        <DialogModal size="xl" title="Modal title">
           <template #trigger>Open Dialog</template>
-          <template #title>Modal title</template>
           <p v-for="i in 20" :key="i" class="mb-4">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
             architecto, enim vitae quibusdam culpa facilis assumenda expedita

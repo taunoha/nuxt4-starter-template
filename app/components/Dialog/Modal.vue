@@ -2,7 +2,7 @@
 import { tv, type VariantProps } from "tailwind-variants";
 
 const dialog = tv({
-  base: "relative mx-auto my-14 rounded-lg bg-white p-8 text-black shadow-xl",
+  base: "shadow-brand-700/70 relative mx-auto my-14 rounded-lg bg-white p-8 text-black shadow-2xl",
   variants: {
     size: {
       sm: "max-w-sm",
@@ -16,6 +16,7 @@ type DialogVariants = VariantProps<typeof dialog>;
 
 interface Props {
   size?: DialogVariants["size"];
+  title: string;
 }
 </script>
 
@@ -37,19 +38,17 @@ const ui = computed(() =>
     </DialogTrigger>
     <DialogPortal>
       <Transition name="fade">
-        <DialogOverlay class="bg-brand-800/70 fixed inset-0 z-[1000]" />
+        <DialogOverlay class="bg-brand-800/70 fixed inset-0 z-[2000]" />
       </Transition>
       <Transition name="slide-in-out">
         <DialogContent
-          class="scroll-touch fixed inset-0 z-[1001] overflow-hidden overflow-y-auto p-4 text-gray-900"
+          class="scroll-touch fixed inset-0 z-[2001] overflow-hidden overflow-y-auto p-4"
         >
           <div :class="ui">
-            <DialogTitle class="mb-4 text-2xl font-bold">
-              <slot name="title" />
+            <DialogTitle class="font-heading mb-8 text-2xl font-bold">
+              {{ props.title }}
             </DialogTitle>
-            <DialogDescription as="div">
-              <slot />
-            </DialogDescription>
+            <slot />
             <DialogClose as-child>
               <AppButtonClose />
             </DialogClose>
