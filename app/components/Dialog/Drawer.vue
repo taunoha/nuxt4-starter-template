@@ -49,7 +49,10 @@ const ui = computed(() =>
                 {{ props.title }}
               </VisuallyHidden>
             </DialogTitle>
-            <DialogDescription class="h-dvh overflow-y-auto px-8 py-16">
+            <DialogDescription
+              class="h-dvh overflow-y-auto px-8 py-16"
+              as="div"
+            >
               <slot />
             </DialogDescription>
             <DialogClose as-child>

@@ -47,7 +47,7 @@ const ui = computed(() =>
             <DialogTitle class="mb-4 text-2xl font-bold">
               <slot name="title" />
             </DialogTitle>
-            <DialogDescription>
+            <DialogDescription as="div">
               <slot />
             </DialogDescription>
             <DialogClose as-child>
