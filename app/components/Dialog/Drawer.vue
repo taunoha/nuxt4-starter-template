@@ -40,6 +40,7 @@ interface Props {
   position?: DrawerVariants["position"];
   size?: DrawerVariants["size"];
   title: string;
+  dismissible?: boolean;
 }
 </script>
 
@@ -47,13 +48,40 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   position: "left",
   size: "default",
+  dismissible: true,
 });
+
+const escKeyEvent = import.meta.client
+  ? new KeyboardEvent("keydown", {
+      key: "Escape",
+      code: "Escape",
+      bubbles: true,
+    })
+  : null;
+
+const route = useRoute();
+const dialogContentEl = ref<HTMLElement | null>(null);
+
 const ui = computed(() =>
   drawer({
     position: props.position,
     size: props.size,
   })
 );
+
+function handleDialogClose() {
+  if (props.dismissible && escKeyEvent) {
+    dialogContentEl.value?.dispatchEvent(escKeyEvent);
+  }
+}
+
+onClickOutside(dialogContentEl, () => {
+  handleDialogClose();
+});
+
+watch(route, () => {
+  handleDialogClose();
+});
 </script>
 <template>
   <DialogRoot>
@@ -68,7 +96,7 @@ const ui = computed(() =>
         <DialogContent
           class="scroll-touch fixed inset-0 z-[1001] overflow-hidden"
         >
-          <div :class="ui">
+          <div ref="dialogContentEl" :class="ui">
             <DialogTitle as-child>
               <VisuallyHidden>
                 {{ props.title }}

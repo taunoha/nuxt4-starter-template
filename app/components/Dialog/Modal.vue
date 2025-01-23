@@ -17,18 +17,45 @@ type DialogVariants = VariantProps<typeof dialog>;
 interface Props {
   size?: DialogVariants["size"];
   title: string;
+  dismissible?: boolean;
 }
 </script>
 
 <script setup lang="ts">
 const props = withDefaults(defineProps<Props>(), {
   size: "lg",
+  dismissible: true,
 });
+
+const escKeyEvent = import.meta.client
+  ? new KeyboardEvent("keydown", {
+      key: "Escape",
+      code: "Escape",
+      bubbles: true,
+    })
+  : null;
+const route = useRoute();
+const dialogContentEl = ref<HTMLElement | null>(null);
+
 const ui = computed(() =>
   dialog({
     size: props.size,
   })
 );
+
+function handleDialogClose() {
+  if (props.dismissible && escKeyEvent) {
+    dialogContentEl.value?.dispatchEvent(escKeyEvent);
+  }
+}
+
+onClickOutside(dialogContentEl, () => {
+  handleDialogClose();
+});
+
+watch(route, () => {
+  handleDialogClose();
+});
 </script>
 
 <template>
@@ -44,7 +71,7 @@ const ui = computed(() =>
         <DialogContent
           class="scroll-touch fixed inset-0 z-[2001] overflow-hidden overflow-y-auto p-4"
         >
-          <div :class="ui">
+          <div ref="dialogContentEl" :class="ui">
             <DialogTitle class="font-heading mb-8 text-2xl font-bold">
               {{ props.title }}
             </DialogTitle>
