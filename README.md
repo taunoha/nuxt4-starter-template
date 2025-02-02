@@ -6,7 +6,7 @@ A modern Nuxt starter template packed with essential features and best practices
 
 This template serves as a future-proof foundation for your projects, allowing you to:
 - Leverage upcoming Nuxt 4 features
-- Use the latest Tailwind CSS v4 (beta) capabilities
+- Use the latest Tailwind CSS v4 capabilities
 - Follow best practices and modern development patterns
 - Typescript enabled by default
 
@@ -18,7 +18,7 @@ This template serves as a future-proof foundation for your projects, allowing yo
 - [x] [Nuxt](https://nuxt.com)
 - [x] [Vue](https://vuejs.org)
 - [x] [VueUse](https://nuxt.com/modules/vueuse)
-- [x] [Tailwind 4](https://tailwindcss.com/docs/v4-beta)
+- [x] [Tailwind 4](https://tailwindcss.com)
 - [x] [Tailwind Variants](https://www.tailwind-variants.org)
 - [x] [Radix Vue](https://www.radix-vue.com/) Unstyled, accessible components for building high‑quality design systems and web apps
 - [x] [Nuxt Icons](https://nuxt.com/modules/icon)
