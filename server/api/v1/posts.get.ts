@@ -1,5 +1,3 @@
-import type { Post } from "#shared/types";
-
 export default defineEventHandler(() => {
   /**
    * You can't use composables (useFetch etc) outside of the setup function.

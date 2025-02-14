@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import type { Post } from "#shared/types";
-
 const posts = ref<Post[]>([]);
 
 const { data, error } = await useFetch("/api/v1/posts");
