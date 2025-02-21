@@ -20,7 +20,7 @@ This template serves as a future-proof foundation for your projects, allowing yo
 - [x] [VueUse](https://nuxt.com/modules/vueuse)
 - [x] [Tailwind 4](https://tailwindcss.com)
 - [x] [Tailwind Variants](https://www.tailwind-variants.org)
-- [x] [Radix Vue](https://www.radix-vue.com/) Unstyled, accessible components for building high‑quality design systems and web apps
+- [x] [Reka UI](https://reka-ui.com) Unstyled, accessible components for building high‑quality design systems and web apps
 - [x] [Nuxt Icons](https://nuxt.com/modules/icon)
 - [x] [Nuxt Image](https://image.nuxt.com/) A drop-in replacement for the native <img> tag.
 - [x] [Nuxt Fonts](https://fonts.nuxt.com/) Plug-and-play web font optimization and configuration 

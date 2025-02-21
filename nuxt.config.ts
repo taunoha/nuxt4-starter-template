@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-11-23",
   modules: [
     "@nuxt/eslint",
-    "radix-vue/nuxt",
+    "reka-ui/nuxt",
     "@nuxt/icon",
     "@nuxt/image",
     "@nuxt/fonts",
