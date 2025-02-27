@@ -9,7 +9,7 @@ const button = tv({
       outline:
         "text-brand border-brand-500 hover:not-disabled:bg-brand-100 hover:not-disabled:text-brand-500 border bg-white",
       solid:
-        "bg-brand-500 box-reflect-below hover:not-disabled:bg-brand-100 hover:not-disabled:text-brand-500 ring-brand-500 shadow-brand-700/40 text-white inset-ring inset-shadow-sm ring shadow-md inset-shadow-white/20 inset-ring-white/15",
+        "bg-brand-500 box-reflect-below hover:not-disabled:bg-brand-100 hover:not-disabled:text-brand-500 ring-brand-500 shadow-brand-700/40 text-white shadow-md ring inset-shadow-sm inset-ring inset-shadow-white/20 inset-ring-white/15",
     },
     disabled: {
       true: "cursor-not-allowed opacity-50 grayscale-25",

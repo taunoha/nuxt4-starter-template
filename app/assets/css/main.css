@@ -7,7 +7,8 @@
   /* Font */
   --font-*: initial;
   --font-sans: "Inter", sans-serif;
-  --font-mono: "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas",
+  --font-mono:
+    "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas",
     "Liberation Mono", "Courier New", "monospace";
 
   /* Base Colors */
