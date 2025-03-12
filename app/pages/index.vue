@@ -11,7 +11,7 @@ if (data.value) {
   posts.value = data.value.slice(0, 3);
 }
 
-useHead({
+useSeoMeta({
   title: "Posts",
 });
 </script>

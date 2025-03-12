@@ -3,7 +3,7 @@ import { tv } from "tailwind-variants";
 import { twMerge } from "tailwind-merge";
 
 const button = tv({
-  base: "inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg px-8 py-3 font-medium transition-colors duration-150",
+  base: "inline-flex items-center justify-center gap-2 rounded-lg px-8 py-3 font-medium transition-colors duration-150",
   variants: {
     variant: {
       outline:
