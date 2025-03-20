@@ -1,4 +1,4 @@
-![nuxt4-starter-template-preview](https://taunohanni.ee/github-nuxt4-preview.jpg)
+![nuxt4-starter-template-preview](https://github.com/user-attachments/assets/13036ef3-c4cb-4e4f-9886-2d83cef41fc6)
 
 # Nuxt 4 Starter Template
 
