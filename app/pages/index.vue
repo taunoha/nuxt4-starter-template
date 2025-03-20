@@ -51,15 +51,24 @@ useSeoMeta({
           <template #trigger>
             <AppButton>Bottom Drawer</AppButton>
           </template>
-          <div class="container">
-            <p>Hello, Bottom Drawer!</p>
-          </div>
+          <p>Hello, Bottom Drawer!</p>
         </DialogDrawer>
-        <DialogDrawer title="Drawer title" position="right">
+        <DialogDrawer
+          title="Drawer title"
+          position="right"
+          :dismissible="false"
+        >
           <template #trigger>
             <AppButton>Right Drawer</AppButton>
           </template>
-          <p>Hello, Right Drawer!</p>
+          <template #default="{ toggleOpen }">
+            <AppButtonClose @click="toggleOpen" />
+            <p>Hello, Right Drawer!</p>
+            <p class="mt-4 text-sm">
+              This drawer is not dismissible. You must click the close button to
+              close it.
+            </p>
+          </template>
         </DialogDrawer>
       </div>
       <p

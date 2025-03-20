@@ -41,6 +41,9 @@ export default defineNuxtConfig({
       titleTemplate: "%s - Nuxt 4 Starter Template",
       link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
     },
+    rootAttrs: {
+      "data-vaul-drawer-wrapper": "",
+    },
   },
   runtimeConfig: {
     public: {

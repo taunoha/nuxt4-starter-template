@@ -1,5 +1,15 @@
 <script lang="ts">
 import { tv, type VariantProps } from "tailwind-variants";
+</script>
+<script setup lang="ts">
+import {
+  DrawerContent,
+  DrawerOverlay,
+  DrawerPortal,
+  DrawerRoot,
+  DrawerTrigger,
+  DrawerTitle,
+} from "vaul-vue";
 
 const drawer = tv({
   base: "shadow-brand-700/70 absolute z-[1002] overflow-hidden bg-white text-black shadow-2xl",
@@ -12,7 +22,7 @@ const drawer = tv({
     position: {
       left: "top-0 bottom-0 left-0 h-dvh",
       right: "top-0 right-0 bottom-0 h-dvh",
-      bottom: "right-0 bottom-0 left-0 max-h-[50vh]",
+      bottom: "right-0 bottom-0 left-0 max-h-[92vh]",
     },
   },
   compoundVariants: [
@@ -31,6 +41,15 @@ const drawer = tv({
       position: ["left", "right"],
       class: "w-full max-w-2xl",
     },
+    {
+      size: "default",
+      position: "bottom",
+      class: "min-h-[50vh] w-full",
+    },
+    {
+      size: "default",
+      position: "left",
+    },
   ],
 });
 
@@ -39,28 +58,16 @@ type DrawerVariants = VariantProps<typeof drawer>;
 interface Props {
   position?: DrawerVariants["position"];
   size?: DrawerVariants["size"];
-  title: string;
   dismissible?: boolean;
+  title: string;
 }
-</script>
-
-<script setup lang="ts">
 const props = withDefaults(defineProps<Props>(), {
-  position: "left",
+  position: "bottom",
   size: "default",
   dismissible: true,
 });
 
-const escKeyEvent = import.meta.client
-  ? new KeyboardEvent("keydown", {
-      key: "Escape",
-      code: "Escape",
-      bubbles: true,
-    })
-  : null;
-
-const route = useRoute();
-const dialogContentEl = ref<HTMLElement | null>(null);
+const isOpen = ref(false);
 
 const ui = computed(() =>
   drawer({
@@ -69,48 +76,32 @@ const ui = computed(() =>
   })
 );
 
-function handleDialogClose() {
-  if (props.dismissible && escKeyEvent) {
-    dialogContentEl.value?.dispatchEvent(escKeyEvent);
-  }
+function toggleOpen() {
+  isOpen.value = !isOpen.value;
 }
-
-onClickOutside(dialogContentEl, () => {
-  handleDialogClose();
-});
-
-watch(route, () => {
-  handleDialogClose();
-});
 </script>
 <template>
-  <DialogRoot>
-    <DialogTrigger as-child>
+  <DrawerRoot
+    v-model:open="isOpen"
+    :direction="props.position"
+    :should-scale-background="true"
+    :set-background-color-on-scale="false"
+    :dismissible="props.dismissible"
+  >
+    <DrawerTrigger as-child>
       <slot name="trigger" />
-    </DialogTrigger>
-    <DialogPortal>
-      <Transition name="fade">
-        <DialogOverlay class="bg-brand-800/70 fixed inset-0 z-[1000]" />
-      </Transition>
-      <Transition :name="`slide-in-${props.position}`">
-        <DialogContent
-          class="scroll-touch fixed inset-0 z-[1001] overflow-hidden"
-        >
-          <div ref="dialogContentEl" :class="ui">
-            <DialogTitle as-child>
-              <VisuallyHidden>
-                {{ props.title }}
-              </VisuallyHidden>
-            </DialogTitle>
-            <div class="h-dvh overflow-y-auto px-8 py-16">
-              <slot />
-            </div>
-            <DialogClose as-child>
-              <AppButtonClose />
-            </DialogClose>
-          </div>
-        </DialogContent>
-      </Transition>
-    </DialogPortal>
-  </DialogRoot>
+    </DrawerTrigger>
+    <DrawerPortal>
+      <DrawerOverlay class="bg-brand-800/70 fixed inset-0 z-[1000]" />
+      <DrawerContent :class="ui">
+        <AppButtonClose v-if="props.dismissible" @click="isOpen = false" />
+        <div class="max-h-dvh overflow-y-auto p-6">
+          <DrawerTitle as-child>
+            <VisuallyHidden>{{ title }}</VisuallyHidden>
+          </DrawerTitle>
+          <slot :toggle-open="toggleOpen" />
+        </div>
+      </DrawerContent>
+    </DrawerPortal>
+  </DrawerRoot>
 </template>
