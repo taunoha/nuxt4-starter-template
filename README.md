@@ -1,4 +1,4 @@
-![nuxt4-starter-template-preview](https://github.com/user-attachments/assets/13036ef3-c4cb-4e4f-9886-2d83cef41fc6)
+![nuxt4-starter-template-preview](https://github.com/user-attachments/assets/5c0fd29c-717d-41ce-85d1-d884e716b7d4)
 
 # Nuxt 4 Starter Template
 
