@@ -12,7 +12,7 @@ import {
 } from "vaul-vue";
 
 const drawer = tv({
-  base: "shadow-brand-700/70 absolute z-[1002] overflow-hidden bg-white text-black shadow-2xl",
+  base: "shadow-brand-700/70 fixed z-[1002] bg-white text-black shadow-2xl",
   variants: {
     size: {
       default: "",
