@@ -12,7 +12,7 @@ import {
 } from "vaul-vue";
 
 const drawer = tv({
-  base: "shadow-brand-700/70 fixed z-[1002] bg-white text-black shadow-2xl",
+  base: "shadow-brand-700/70 fixed z-[1051] bg-white text-black shadow-2xl",
   variants: {
     size: {
       default: "",
@@ -67,6 +67,7 @@ const props = withDefaults(defineProps<Props>(), {
   dismissible: true,
 });
 
+const route = useRoute();
 const isOpen = ref(false);
 
 const ui = computed(() =>
@@ -79,6 +80,11 @@ const ui = computed(() =>
 function toggleOpen() {
   isOpen.value = !isOpen.value;
 }
+
+watch(route, async () => {
+  await nextTick();
+  isOpen.value = false;
+});
 </script>
 <template>
   <DrawerRoot
@@ -92,7 +98,7 @@ function toggleOpen() {
       <slot name="trigger" />
     </DrawerTrigger>
     <DrawerPortal>
-      <DrawerOverlay class="bg-brand-800/70 fixed inset-0 z-[1000]" />
+      <DrawerOverlay class="bg-brand-800/70 fixed inset-0 z-[1050]" />
       <DrawerContent :class="ui">
         <AppButtonClose v-if="props.dismissible" @click="isOpen = false" />
         <div class="max-h-dvh overflow-y-auto p-6">
