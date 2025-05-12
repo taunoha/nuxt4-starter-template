@@ -65,11 +65,11 @@ watch(route, () => {
     </DialogTrigger>
     <DialogPortal>
       <Transition name="fade">
-        <DialogOverlay class="bg-brand-800/70 fixed inset-0 z-[2000]" />
+        <DialogOverlay class="bg-brand-800/70 fixed inset-0 z-2000" />
       </Transition>
       <Transition name="slide-in-out">
         <DialogContent
-          class="scroll-touch fixed inset-0 z-[2001] overflow-hidden overflow-y-auto p-4"
+          class="scroll-touch fixed inset-0 z-2001 overflow-hidden overflow-y-auto p-4"
         >
           <div ref="dialogContentEl" :class="ui">
             <DialogTitle class="font-heading mb-8 text-2xl font-bold">

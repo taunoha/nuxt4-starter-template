@@ -12,7 +12,7 @@ import {
 } from "vaul-vue";
 
 const drawer = tv({
-  base: "shadow-brand-700/70 fixed z-[1051] bg-white text-black shadow-2xl",
+  base: "shadow-brand-700/70 fixed z-1051 bg-white text-black shadow-2xl",
   variants: {
     size: {
       default: "",
@@ -98,7 +98,7 @@ watch(route, async () => {
       <slot name="trigger" />
     </DrawerTrigger>
     <DrawerPortal>
-      <DrawerOverlay class="bg-brand-800/70 fixed inset-0 z-[1050]" />
+      <DrawerOverlay class="bg-brand-800/70 fixed inset-0 z-1050" />
       <DrawerContent :class="ui">
         <AppButtonClose v-if="props.dismissible" @click="isOpen = false" />
         <div class="max-h-dvh overflow-y-auto p-6">

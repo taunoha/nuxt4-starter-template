@@ -1,3 +1,4 @@
+/* stylelint-disable at-rule-no-deprecated */
 @layer base {
   :root {
     font-size: clamp(14px, 2vw, 18px);
