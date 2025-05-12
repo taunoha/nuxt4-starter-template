@@ -11,5 +11,5 @@ export default {
     "scss/at-rule-no-unknown": null,
     "custom-property-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9*]+)*$",
   },
-  ignoreAtRules: ["apply"],
+  ignoreAtRules: ["apply", "reference"],
 };
