@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
-  compatibilityDate: "2024-11-23",
+  compatibilityDate: "2025-06-01",
   modules: [
     "@nuxt/eslint",
     "reka-ui/nuxt",
