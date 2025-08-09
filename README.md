@@ -5,13 +5,10 @@
 A modern Nuxt starter template packed with essential features and best practices. While Nuxt 3 is currently stable, this template is forward-compatible with the upcoming Nuxt 4, incorporating its latest enhancements and development patterns.
 
 This template serves as a future-proof foundation for your projects, allowing you to:
-- Leverage upcoming Nuxt 4 features
+- Leverage Nuxt 4 features
 - Use the latest Tailwind CSS v4 capabilities
 - Follow best practices and modern development patterns
 - Typescript enabled by default
-
-> [!NOTE]
-> This template is maintained to stay current with Nuxt 4's development progress.
 
 ## Features
 

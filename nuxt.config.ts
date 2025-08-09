@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
-  compatibilityDate: "2025-06-01",
+  compatibilityDate: "2025-07-15",
   modules: [
     "@nuxt/eslint",
     "reka-ui/nuxt",
@@ -52,9 +52,6 @@ export default defineNuxtConfig({
       }),
       environment: "production",
     },
-  },
-  future: {
-    compatibilityVersion: 4,
   },
   typescript: {
     strict: true,
