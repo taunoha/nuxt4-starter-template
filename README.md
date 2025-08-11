@@ -2,7 +2,7 @@
 
 # Nuxt 4 Starter Template
 
-A modern Nuxt starter template packed with essential features and best practices. While Nuxt 3 is currently stable, this template is forward-compatible with the upcoming Nuxt 4, incorporating its latest enhancements and development patterns.
+A modern Nuxt starter template packed with essential features and best practices.
 
 This template serves as a future-proof foundation for your projects, allowing you to:
 - Leverage Nuxt 4 features
