@@ -17,18 +17,18 @@
     ]
   },
   "engines": {
-    "node": "22.x"
+    "node": "24.x"
   },
   "dependencies": {
-    "@nuxt/eslint": "^1.12.1",
-    "@nuxt/fonts": "^0.12.1",
-    "@nuxt/icon": "^2.1.1",
+    "@nuxt/eslint": "^1.15.1",
+    "@nuxt/fonts": "^0.14.0",
+    "@nuxt/icon": "^2.2.1",
     "@nuxt/image": "^2.0.0",
     "@tailwindcss/vite": "^4.1.18",
-    "@vueuse/nuxt": "^14.1.0",
-    "nuxt-security": "^2.5.0",
-    "reka-ui": "^2.7.0",
-    "tailwind-merge": "^3.4.0",
+    "@vueuse/nuxt": "^14.2.1",
+    "nuxt-security": "^2.5.1",
+    "reka-ui": "^2.8.0",
+    "tailwind-merge": "^3.4.1",
     "tailwind-variants": "^3.2.2",
     "tailwindcss": "^4.1.18",
     "vaul-vue": "^0.4.1",
@@ -36,22 +36,22 @@
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^3.1.1",
+    "@nuxt/devtools": "^3.2.1",
     "cssnano": "^7.1.2",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-prettier": "^5.5.5",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
-    "nuxt": "^4.2.2",
-    "prettier": "3.7.4",
+    "nuxt": "^4.3.1",
+    "prettier": "3.8.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
-    "stylelint": "^16.26.1",
-    "stylelint-config-recess-order": "^7.4.0",
+    "stylelint": "^17.3.0",
+    "stylelint-config-recess-order": "^7.6.1",
     "stylelint-config-recommended-vue": "^1.6.1",
-    "stylelint-config-standard": "^39.0.1",
-    "stylelint-config-standard-scss": "^16.0.0",
+    "stylelint-config-standard": "^40.0.0",
+    "stylelint-config-standard-scss": "^17.0.0",
     "stylelint-prettier": "^5.0.3",
     "typescript": "^5.9.3",
-    "vue-tsc": "^3.2.1"
+    "vue-tsc": "^3.2.4"
   }
 }
