@@ -24,13 +24,13 @@
     "@nuxt/fonts": "^0.14.0",
     "@nuxt/icon": "^2.2.1",
     "@nuxt/image": "^2.0.0",
-    "@tailwindcss/vite": "^4.1.18",
+    "@tailwindcss/vite": "^4.2.0",
     "@vueuse/nuxt": "^14.2.1",
     "nuxt-security": "^2.5.1",
-    "reka-ui": "^2.8.0",
-    "tailwind-merge": "^3.4.1",
+    "reka-ui": "^2.8.2",
+    "tailwind-merge": "^3.5.0",
     "tailwind-variants": "^3.2.2",
-    "tailwindcss": "^4.1.18",
+    "tailwindcss": "^4.2.0",
     "vaul-vue": "^0.4.1",
     "vue": "latest",
     "vue-router": "latest"
@@ -52,6 +52,6 @@
     "stylelint-config-standard-scss": "^17.0.0",
     "stylelint-prettier": "^5.0.3",
     "typescript": "^5.9.3",
-    "vue-tsc": "^3.2.4"
+    "vue-tsc": "^3.2.5"
   }
 }
