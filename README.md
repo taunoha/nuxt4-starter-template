@@ -31,8 +31,8 @@ This template serves as a future-proof foundation for your projects, allowing yo
 ## Getting Started
 
 ### Prerequisites
-- Node.js (v22.0.0 or newer)
-- npm (v10.9.0 or newer)
+- Node.js (v24.0.0 or newer)
+- npm (v11.0.0 or newer)
 
 ### Installation
 
